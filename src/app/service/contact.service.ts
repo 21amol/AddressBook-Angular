@@ -27,4 +27,9 @@ updateContact(personId:number, contact: any) {
   return this.http.put("http://localhost:8080/addressbook/edit/" + personId, contact)
  }
 
+// Getting details By ID...
+getContactByID(personId:number){
+  return this.http.get("http://localhost:8080/addressbook/get/"+ personId);
+ }
+
 }

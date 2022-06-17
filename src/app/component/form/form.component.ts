@@ -16,6 +16,10 @@ export class FormComponent implements OnInit {
   contact: Contact = new Contact (0,"","","","","","","","")
 
   ngOnInit(): void {
+    this.service.getContactByID(this.personId).subscribe((getData:any)=>{
+      console.log(getData.data);
+      this.contact = getData.data;
+    })
   }
 
   onCancel(){
