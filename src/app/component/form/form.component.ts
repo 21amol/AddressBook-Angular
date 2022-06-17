@@ -9,10 +9,11 @@ import { ContactService } from 'src/app/service/contact.service';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
+  personId: any = this.route.snapshot.paramMap.get("personId");
 
   constructor(private router:Router, private route: ActivatedRoute, private service: ContactService) { }
 
-contact: Contact = new Contact (0,"","","","","","","","")
+  contact: Contact = new Contact (0,"","","","","","","","")
 
   ngOnInit(): void {
   }
@@ -27,4 +28,9 @@ contact: Contact = new Contact (0,"","","","","","","","")
     this.service.addContacts(this.contact).subscribe((data: any) =>
      { this.router.navigate(["dashboard"])})
   }
+updateContact() {
+  this.service.updateContact(this.personId, this.contact).subscribe((data: any) =>
+  { this.router.navigate(["dashboard"])})
+ }
+
 }

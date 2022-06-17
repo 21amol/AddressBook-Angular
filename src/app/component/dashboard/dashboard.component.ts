@@ -32,4 +32,9 @@ deleteContact(personId:number) {
 });
  }
 
+ // Update call from service...
+ updateContact(employeeID:number) {
+  this.router.navigate(["update", employeeID]);
+   }
+
 }

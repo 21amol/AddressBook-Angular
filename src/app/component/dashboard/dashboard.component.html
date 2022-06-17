@@ -18,6 +18,7 @@
 				<th>City</th>
 				<th>State</th>
 				<th>Zip</th>
+				<th>Actions</th>
 		 </tr>
 
  <!-- Displaying Contacts Data On Dashboard... -->
@@ -32,8 +33,9 @@
 	<td>{{con.state}}</td>
 	<td>{{con.zip}}</td>
 	<td>
-	<img src="./assets/delete.svg" (click)="deleteContact(con.personId)">
-			</td> 
+	  <img src="./assets/delete.svg" (click)="deleteContact(con.personId)">
+	  <img src="./assets/create.svg" (click)="updateContact(con.personId)">
+	</td> 
 
  </tr>
 

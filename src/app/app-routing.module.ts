@@ -6,7 +6,8 @@ import { FormComponent } from './component/form/form.component';
 
 const routes: Routes = [
   { path: "dashboard", component:DashboardComponent },
-  { path: "form", component:FormComponent }
+  { path: "form", component:FormComponent },
+  { path: "update/:personId",component:FormComponent}
 ];
 
 @NgModule({

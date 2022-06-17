@@ -22,4 +22,9 @@ deleteContact(personId:number) {
   return this.http.delete("http://localhost:8080/addressbook/remove/" + personId)
  }
 
+ // Updating Contact Details...
+updateContact(personId:number, contact: any) {
+  return this.http.put("http://localhost:8080/addressbook/edit/" + personId, contact)
+ }
+
 }
