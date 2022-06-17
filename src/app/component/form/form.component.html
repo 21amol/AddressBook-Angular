@@ -1,0 +1,73 @@
+ <!-- <div class="form-content">
+	<form class="form" #inputform="ngFrom"> -->
+
+
+	<div class="form-content">
+		<div class="form-head">
+			<span> PERSON ADDRESS FORM </span>
+	</div>
+
+	<div class="form" (ngSubmit) = "onSubmit()">
+
+	<label class="label text" for="name">First Name</label>
+	<div class="row-content">
+		<input class="input" type="text" id="name" name="name" [(ngModel)]="contact.firstName"  placeholder="Enter First Name..." required>
+	</div>
+
+	<label class="label text" for="name">Last Name</label>
+	<div class="row-content">
+		<input class="input" type="text" id="name" name="name" [(ngModel)]="contact.lastName" placeholder="Enter Last Name..." required>
+	</div>
+
+
+	<label class="label text" for="phone">Phone Number</label>
+	<div class="row-content">
+			<input class="input" type="text" id="phone" name="phone" [(ngModel)]="contact.phoneNumber" placeholder="Enter Phone Number..." required>
+	</div>
+
+	<label class="label text" for="phone">Email</label>
+	<div class="row-content">
+			<input class="input" type="text" id="email" name="email" [(ngModel)]="contact.email" placeholder="Enter Email Id..." required>
+	</div>
+
+
+	<label class="label text" for="address">Address</label>
+	<div class="row-content">
+			<textarea class="input" name="address" id="address" [(ngModel)]="contact.address" placeholder="Enter Address..." required></textarea>
+	</div>
+
+	<div class="row">
+		<div class="input-content">
+			<label class="label text" for="zip">State</label>
+			<div class="row-content">
+					<input class="input" type="text" id="state" name="state" [(ngModel)]="contact.state" placeholder="Enter State..." required>
+			</div>
+		</div>
+
+		<div class="input-content">
+			<label class="label text" for="zip">City</label>
+			<div class="row-content">
+					<input class="input" type="text" id="city" name="city" [(ngModel)]="contact.city" placeholder="Enter City..." required>
+			</div>
+		</div>
+
+		<div class="input-content">
+			<label class="label text" for="zip">ZipCode</label>
+			<div class="row-content">
+					<input class="input" type="text" id="zip" name="zip" placeholder="Enter Zip Code..." required>
+			</div>
+		</div>
+	</div>
+
+	<div class="buttonParent">
+		<button class="resetButton button cancelButton" (click)="onCancel()">Cancel</button>
+		<div class="submit-reset">
+			<button type="submit" class="button submitButton" id="submitButton" (click)="onSubmit()">Submit</button>
+			<button type="reset" class="resetButton button">Reset</button>
+		</div>
+	</div>
+	</div>
+
+
+
+			

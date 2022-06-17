@@ -1,0 +1,38 @@
+<div class="main-content">
+  <div class="header-content">
+    <div class="add-detail-text"> Contact Details </div>
+
+    <button class="add-button" (click)="onAddUser()"><img src="./assets/add.svg" alt=""/>Add</button>
+	</div>
+
+	<div class="table-main">
+	 <table id="table-display" class="table">
+		 
+		 <tr>
+				<th>Id</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Phone Number</th>
+				<th>Email ID</th>
+				<th>Address</th>
+				<th>City</th>
+				<th>State</th>
+				<th>Zip</th>
+		 </tr>
+
+ <!-- Displaying Contacts Data On Dashboard... -->
+ <tr *ngFor="let con of contact" class="detailoftab">
+	<td>{{con.personId}}</td>
+	<td>{{con.firstName}}</td>
+	<td>{{con.lastName}}</td>
+	<td>{{con.phoneNumber}}</td>
+	<td>{{con.email}}</td>
+	<td>{{con.address}}</td>
+	<td>{{con.city}}</td>
+	<td>{{con.state}}</td>
+	<td>{{con.zip}}</td>
+ </tr>
+
+		</table>
+	</div>
+</div>
