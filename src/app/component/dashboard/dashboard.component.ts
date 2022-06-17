@@ -24,4 +24,12 @@ onAddUser(){
   this.router.navigate(["form"]);
 }
 
+// Delete call from service class...
+deleteContact(personId:number) {
+  console.log(personId);
+  this.service.deleteContact(personId).subscribe((data) => { console.log("Data Deleted!!!");
+  this.ngOnInit();
+});
+ }
+
 }

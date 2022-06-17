@@ -17,4 +17,9 @@ export class ContactService {
     return this.http.get("http://localhost:8080/addressbook/get");
   }
 
+ // Deleting Contact Details...
+deleteContact(personId:number) {
+  return this.http.delete("http://localhost:8080/addressbook/remove/" + personId)
+ }
+
 }
